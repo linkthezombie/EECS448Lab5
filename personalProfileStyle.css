@@ -1,0 +1,22 @@
+p
+{
+    background-color: mediumturquoise; color: mintcream;
+    font-family: Arial font-size: 22pt;
+}
+
+body
+{
+    background-color: orchid;
+}
+
+a
+{
+    background-color: orchid;
+    color: blue;
+}
+
+a:hover
+{
+    background-color: mediumorchid;
+    color: blue;
+}

@@ -1,0 +1,84 @@
+<div class="slideshow-container">
+  The Mejai of FOREWARNED <br><br>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/9/94/NecrephColor.jpg/revision/latest/scale-to-width-down/300?cb=20211026024228" width="400" height="220">
+    <div class="text"><br>Necreph the Shadow</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/9/90/Ataimon.png/revision/latest/scale-to-width-down/450?cb=20221017235636" width="400" height="220">
+    <div class="text"><br>Ataimon the Abominable</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/4/4e/OuphrisTheForgottenTrueForm.png/revision/latest/scale-to-width-down/450?cb=20220105174203" width="400" height="220">
+    <div class="text"><br>Ouphris the Forgotten</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/f/f1/DekanTheLost.png/revision/latest/scale-to-width-down/250?cb=20220112154047" width="400" height="220">
+    <div class="text"><br>Dekan the Lost</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/6/61/Talgorwalking2.jpg/revision/latest/scale-to-width-down/450?cb=20211215060712" width="400" height="220">
+    <div class="text"><br>Talgor the Perilous</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div> <br>
+    <img src="https://static.wikia.nocookie.net/forewarned/images/9/9e/Khet_Rathos.png/revision/latest/scale-to-width-down/396?cb=20221106163834" width="400" height="220">
+    <div class="text"><br>Rathos the Damned</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <br> <br>
+  <a class="prev" onclick="plusSlides(-1)">Previous</a>
+  &nbsp;&nbsp;&nbsp;
+  <a class="next" onclick="plusSlides(1)">Next</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>

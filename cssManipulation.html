@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        #txtElement {
+            border: 4px solid;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="txtElement">Manipulate this text by providing size and color properties below. Colors are changed using the color code (00-FF) system</div>
+  <br><label>Border:</label><br><br>
+  Border Red Value:&nbsp;<input type="text" id="border_red" name="border_red"><br>
+  Border Green Value:&nbsp;<input type="text" id="border_green" name="border_green"><br>
+  Border Blue Value:&nbsp;<input type="text" id="border_blue" name="border_blue"><br>
+  Border Width Value:&nbsp;<input type="text" id="border_width" name="border_width"><br>
+
+  <br><br><label>Background:</label><br><br>
+  Background Red Value:&nbsp;<input type="text" id="back_red" name="back_red"><br>
+  Background Green Value:&nbsp;<input type="text" id="back_green" name="back_green"><br>
+  Background Blue Value:&nbsp;<input type="text" id="back_blue" name="back_blue"><br>
+  <br><input type="submit" value="Change Colors" id="save" name="button" onclick="changeColors(border_red.value, border_green.value, border_blue.value, border_width.value, back_red.value, back_green.value, back_blue.value)">
+
+<script>
+  function changeColors(bd_red, bd_green, bd_blue, bd_width, bck_red, bck_green, bck_blue){
+    let element = document.getElementById("txtElement");
+
+    let bdstring = "#";
+    bdstring += new String(bd_red);
+    bdstring += new String(bd_green);
+    bdstring += new String(bd_blue);
+    element.style.borderColor = bdstring;
+
+    let width = ""
+    width += new String(bd_width)
+    element.style.borderWidth = width;
+
+    let bckstring = "#";
+    bckstring += new String(bck_red);
+    bckstring += new String(bck_green);
+    bckstring += new String(bck_blue);
+    element.style.backgroundColor = bckstring;
+  }
+</script>
+</body>
+</html>
